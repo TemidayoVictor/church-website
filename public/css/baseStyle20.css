@@ -1,0 +1,1780 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+/* Pale blue (#EFFAFD), royal blue (#4A8BDF), eggplant (#A0006D), red (#da2535)*/
+/* Deep red (#8E0D3C), blackcurrant #1D1842), orange (#EF3B33), rose pink (#FDA1A2) */
+/* style="background: url(images/home-slide-1.jpg);" deep purple: #9b51e0 */
+
+:root {
+    --color-primary:#B20000;
+    --white: #fff;
+    --black: rgb(34, 44, 42);
+    --border: 1px solid var(--color-primary);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --dark-shadow: 0 0 0 100vw rgba(0,0,0,.5);
+}
+
+html {
+    font-size: 10%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .2s linear;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', 'sans-serif';
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:32.5%;
+    overflow-x: hidden;
+}
+
+/* Typography and General styles */
+
+a {
+    text-decoration: none;
+    color: var(--black);
+    padding: .5em;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    position: relative;
+}
+
+a.inverted {
+    color: var(--white);
+    border-color: var(--white);
+    margin-right: .5em;
+}
+
+a.inverted:hover {
+    background-color: var(--white);
+    color: var(--color-primary) ;
+}
+
+h1, h2,  h3 {
+    font-family: 'Josefin Sans', 'sans-serif';
+}
+
+
+button, .button {
+    outline: none;
+    border: none;
+    padding: .5em;
+    background-color: var(--color-primary);
+    color: var(--white);
+    border-radius: 2px;
+    border: 1px solid transparent;
+    font-size: 1rem;
+}
+
+button:hover, .button:hover {
+    background-color: var(--white);
+    border: var(--border);
+    color: var(--color-primary);
+}
+
+button.inverse {
+    background-color: var(--white);
+    border: var(--border);
+    color: var(--color-primary);
+}
+
+button.inverse:hover {
+    background-color: var(--color-primary);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 1em 10%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block {
+    display: block;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.title {
+    border-bottom: 3px solid var(--color-primary);
+    font-size: 2em;
+    display: inline-block;
+    padding: .2em 0;
+    text-transform: uppercase;
+}
+
+.btn {
+    display: block;
+    margin: .3em 0;
+    text-align: center;
+    border: 1px solid var(--white);
+    width: 100%;
+    color: var(--white);
+}
+
+.btn:hover{
+    background-color: var(--white);
+    color: var(--color-primary);
+}
+
+.centered {
+    text-align: center;
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+.mb-1 {
+    margin-bottom: .5em;
+}
+
+.mb-2 {
+    margin-bottom: 2em;
+}
+
+.mt-1 {
+    margin-top: 1em;
+}
+
+.pb-1 {
+    padding-bottom: .5em;
+}
+
+.right {
+    text-align: right;
+}
+
+.bod-bot {
+    border-bottom: 1px solid grey;
+}
+
+.fas {
+    font-weight: 600;
+}
+
+.read:hover {
+    text-decoration: underline;
+}
+
+video {
+    width: 100%;
+    height: 240px;
+    box-shadow: inset -3px -3px 7px #ffffffb2, inset 3px 3px 5px rgba(94, 104, 121, 0.145);
+    padding: 1em;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.bcco-black {
+    background-color: var(--color-primary);
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-title {
+    color: var(--color-primary);
+}
+
+
+nav {
+    width: 60%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: .2em;
+}
+
+nav ul a:hover {
+    border: var(--border);
+}
+
+.give, .selected , .resources a.selected{
+    background-color: var(--color-primary);
+    color: var(--white);
+    box-shadow: none;
+}
+
+.give:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: var(--border);
+}
+
+/* Main */
+
+main {
+    margin: 4.7em 0;
+}
+
+/* Hero Section */
+
+.hero {
+    background-color: var(--color-primary);
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .welcome-text {
+    width: 100%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero .welcome-text h1, .second h1{
+    margin-bottom: .5em;
+    font-size: 2.5rem;
+}
+
+.hero .welcome-text p {
+    margin-bottom: 2em;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.hero .image, .month-image, .give-image{
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.hero .image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* What's New */
+
+.new .header {
+    text-align: center;
+    margin-block: 2em;
+}
+
+.new .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: .5em;
+}
+
+.new .header p {
+    font-size: 1.5rem;
+}
+
+.new-body {
+    display: flex;
+    justify-content: center;
+}
+
+.new-content {
+    width: 50%;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.1);
+    padding: .3em;
+    border-radius: 10px;
+
+}
+
+.new-image {
+    width: 100%;
+}
+
+.new-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.new-content h1, .new-content p {
+    text-align: center;
+    margin-block: .2em;
+}
+
+/* Second */
+
+.second {
+    margin-top: 4.5em;
+    align-items: center;
+}
+
+.second .image {
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.1);
+    padding: .5em;
+    padding: .3em;
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+    max-height: 100%;
+}
+
+.second .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.second .section-text {
+    width: 60%;
+}
+
+.second h1, .second {
+    color: var(--color-primary);
+}
+
+.section-text p {
+    color: var(--black);
+}
+
+.section-text h1.title-2 {
+    font-size: 1.9rem;
+    color: green;
+}
+
+.section-text p {
+    font-size: 1.2rem;
+    margin-bottom: .7em;
+    text-align: justify;
+}
+
+.second p {
+    line-height: 1.6;
+}
+
+.title-3 {
+    font-size: 1.4rem;
+    margin-bottom: .3em;
+    padding-bottom: .1em;
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+    color: var(--color-primary);
+}
+
+/* Faith */
+
+.faith {
+    margin-top: 3em;
+    color: var(--white);
+    text-align: center;
+    padding: 5em;
+    position: relative;
+}
+
+.faith h1 {
+    margin-bottom: .5em;
+    font-size: 3rem;
+    color: var(--white);
+    border-bottom: 3px solid var(--white);
+}
+
+.faith p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.faith::after {
+    content: '';
+    background-color: var(--color-primary);
+    position: absolute;
+    inset: 0;
+    transform: skewY(-5deg);
+    z-index: -1;
+}
+
+/* Expressions */
+
+.expressions {
+    margin-top: 5em;
+}
+
+.expressions h1 {
+    color: var(--color-primary);
+}
+
+.expressions-container, .pastors-container, .confessions {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+}
+
+.expression-box, .pastors-content {
+    border: var(--border);
+    padding: .1em;
+    position: relative;
+}
+
+.expressions .expression-image, .pastors-image {
+    height: 23rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.expressions .expression-image img, .pastors-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.expression-content {
+    color: var(--white);
+    padding: 1em;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(178, 0, 0, .94);
+    inset: 0;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+.expression-content h3, .expression-content p{
+    text-align: center;
+    line-height: 1.5;
+
+}
+
+.expression-content h3 {
+    font-size: 1.3rem;
+}
+
+.expression-content p {
+    font-size: 1.1rem;
+}
+
+.expressions .expression-image:hover .expression-content {
+    inset: 15px;
+    background-color: rgb(178, 0, 0, .7);
+}
+
+/* March */
+
+.month, .give-online {
+    background-color: var(--color-primary);
+    color: var(--white);
+    padding-block: 5em;
+    margin-top: 2em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.month h1, .give-online h1 {
+    font-size: 2.5rem;
+    margin-bottom: .3em;
+}
+
+.month p, .give-online p {
+    font-size: 1.2rem;
+    margin-bottom: .4em;
+    line-height: 1.6;
+}
+
+.month-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.month-content h2{
+    margin-bottom: .6em;
+}
+
+.month-content p {
+    text-align: center;
+}
+
+.month-image, .give-image {
+    height: 100%;
+    padding: 0;
+}
+
+.month-image img, .give-image img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.month-image img {
+    border-radius: 10px;
+}
+
+/* Give Online */
+
+.give-online {
+    color: var(--color-primary);
+    background-color: var(--white);
+    padding-block: 3em;
+    padding-bottom: 1em;
+}
+
+.give-content {
+    width: 45%;
+}
+
+.give-image p {
+    color: var(--black);
+}
+
+.give-image {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    width: 50%;
+    gap: .3em;
+}
+
+.give-image img {
+    border-radius: 10px;
+}
+
+.give-image img.img-one {
+    height: 15rem;
+}
+
+
+/* Heading */
+
+.heading {
+    background-color: var(--color-primary);
+    height: 20vh;
+    color: var(--white);
+    align-items: center;
+    text-align: center;
+}
+
+.heading .welcome-text {
+    width: 100%;
+}
+
+.heading h1 {
+    font-size: 2.5rem;
+    margin-bottom: .2em;
+}
+
+/* Tenets */
+
+.tenets {
+    margin-top: 2em;
+    background-color: var(--color-primary);
+    color: var(--white);
+}
+
+.tenets h1.title {
+    border-bottom: 3px solid var(--white);
+}
+
+.tenets-container {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tenets .content {
+    width: 45%;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid var(--white);
+}
+
+.tenets .content p{
+    color: var(--white);
+}
+
+.tenets .content.filled {
+    background-color: var(--white);
+    color: var(--color-primary);
+}
+
+.tenets .content.filled p {
+    color: var(--black);
+}
+
+.tenets .content h1 {
+    margin-bottom: .4em;
+}
+
+.tenets .content p {
+    line-height: 1.5;
+}
+
+.tenets .content.right {
+    text-align: right;
+}
+
+
+/* Pastors */
+
+.pastors .title {
+    color: var(--color-primary);
+}
+
+.pastors-container {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.pastors-container h3 {
+    padding-block: 1em;
+    color: var(--color-primary);
+}
+
+.pastors-content {
+    border: none;
+    box-shadow: var(--box-shadow);
+}
+
+.pastors-content a {
+    margin-bottom: 1em;
+    display: block;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-primary);
+    color: var(--white);
+}
+
+.pastors-content a:hover {
+    background-color: var(--white);
+    color: var(--color-primary);
+    border: var(--border);
+}
+
+.pastors-details {
+    padding-inline: 2em;
+}
+
+.content-pastor {
+    margin-block-start: 1em;
+}
+
+.image-pastor {
+    position: relative;
+    border: var(--border);
+    max-height: 20rem;
+    overflow: hidden;
+}
+
+.image-pastor img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.details-pastor {
+    position: absolute;
+    align-items: flex-end;
+    padding: 1em;
+    background-color: rgb(178, 0, 0, .7);
+    inset: 0;
+    border: 2px solid var(--white);
+}
+
+.text-details {
+    text-align: left;
+    flex-direction: column;
+    align-items: end;
+}
+
+.text-details h3.name {
+    font-size: 2.2rem;
+    line-height: 1.6;
+    letter-spacing: .8rem;
+    color: var(--white);
+}
+
+.text-details h3 {
+    color: var(--white);
+}
+
+.content-pastor .image-pastor .text-details h1.right {
+    text-align: center;
+}
+
+/* Department */
+
+.department {
+    background-color: var(--color-primary);
+}
+
+.department .title {
+    color: var(--white);
+    border-bottom: 3px solid var(--white);
+}
+
+.department-container {
+    margin-top: 2em;
+}
+
+.department-content {
+    border-bottom: 1px solid var(--white);
+    margin-block: 1em;
+}
+
+.department-image {
+    overflow: hidden;
+    width: 20%;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+}
+
+.department-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.department-details {
+    width: 77%;
+    color: var(--white);
+}
+
+.department-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: .3em;
+    text-transform: uppercase;
+}
+
+.department-details p {
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+    text-align: justify;
+    color: var(--white);
+}
+
+.reverse .department-details {
+    text-align: right;
+}
+
+/* Large Text */
+
+.large-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.border {
+    border: 2px solid var(--color-primary);
+    margin-top: 1.5em;
+    padding: 1em;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+
+.large-text p {
+    background-color: var(--white);
+    text-align: center;
+    color: var(--black);
+    padding: 1em;
+    border-radius: 5px;
+    font-size: 2em;
+    text-transform: uppercase;
+    
+    display: inline-block;
+}
+
+/* Inspiration */
+
+.inspiration {
+    width: 70%;
+    color: var(--color-primary);
+    box-shadow: inset -3px -3px 7px #ffffffb2, inset 3px 3px 5px rgba(94, 104, 121, 0.145);
+    padding: 1em;
+    height: 100%;
+}
+
+.inspiration.no-shadow {
+    box-shadow: none;
+}
+
+.inspiration h1 {
+    font-size: 1.7rem;
+    margin-bottom: .5em;
+}
+
+.inspiration p {
+    font-size: 1.3rem;
+    margin-bottom: .6em;
+    text-align: justify;
+    line-height: 1.5;
+    color: var(--black);
+}
+
+.inspiration h3 {
+    margin-bottom: .5em;
+    font-size: 1.5rem;
+}
+
+.post-details {
+    padding-bottom: .5em;
+}
+
+.post h3 {
+    margin-bottom: .3em;
+}
+
+.latest-news {
+    width: 25%;
+    color: var(--color-primary);
+}
+
+.latest-news h1, .giving-online h1, .media h1, .events h1 {
+    background-color: var(--color-primary);
+    color: var(--white);
+    text-align: center;
+    padding: .5em;
+    border-radius: 2px;
+    margin-bottom: .5em;
+}
+
+.latest-news-details {
+    margin-bottom: 1em;
+    padding-inline: .5em;
+}
+
+.latest-news-details h3 {
+    margin-bottom: .2em;
+    display: inline-block;
+}
+
+.latest-news-details p {
+    margin-top: .5em;    
+    color: var(--black);
+    line-height: 1.5;
+}
+
+.latest-news-content {
+    border: 1px solid rgb(196, 192, 192);
+    margin-bottom: 1em;
+    padding: .3em;
+    border-radius: 5px;
+}
+
+.latest-news-image {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.latest-news-image img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Account Details */
+
+.giving-online {
+    width: 70%;
+}
+
+.account-container {
+    box-shadow: var(--box-shadow);
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 5px;
+}
+
+.account-container-2 {
+    background-color:var(--color-primary);
+}
+
+.account-content {
+    margin-bottom: 1.5em;
+}
+
+.acct-details {
+    margin-bottom: 2em;
+    border-bottom: var(--border);
+    padding-bottom: 1em;
+}
+
+.acct-details h3 {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+}
+
+.acct-details p {
+    font-size: 1.3rem;
+    color: var(--black);
+}
+
+.acct-details p.info {
+    width: 70%;
+    font-size: 1.1rem;
+}
+
+.account-container-2 .acct-details {
+    border-bottom: 1px solid var(--white);
+}
+
+.account-container-2 .acct-details p, .account-container-2 .acct-details h3 {
+    color: var(--white);
+}
+
+/* Giving Details */
+
+.giving-details {
+    padding: 1em;
+    border: var(--border);
+    border-radius: 2px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    width: 45%;
+}
+
+.full {
+    width: 100%;
+}
+
+label {
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+input, select {
+    border: none;
+    border-bottom: var(--border);
+    margin-top: 1em;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+/* Media */
+
+.media {
+    width: 70%;
+}
+
+.messages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1.5rem;
+}
+
+.message-content {
+    border: 1px solid grey;
+    padding: .5em;
+}
+
+.message-image, .library-image {
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.message-image img, .library-image img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.message-description {
+    margin-top: .5em;
+}
+
+.message-description h3, .library-description h3 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: .5em;
+}
+
+.message-description p, .library-description p {
+    color: var(--black);
+    margin-bottom: .5em;
+}
+
+.msg-btn {
+    background-color: var(--color-primary);
+    color: var(--white);
+    text-align: center;
+}
+
+.msg-btn:hover {
+    background-color: var(--white);
+    color: var(--color-primary);
+    border: var(--border);
+}
+
+.message-body .message-image{
+    width: 28%;
+}
+
+.message-body .message-details{
+    width: 68%;
+}
+
+.message-body .message-details h2{
+    color: var(--color-primary);
+    margin-bottom: .5em;
+}
+
+.message-body .message-details p {
+    font-size: 1.2rem;
+}
+
+audio {
+    display: block;
+    margin-bottom: .5em;
+}
+
+.resources a {
+    display: block;
+    padding: 1em 1.5em;
+    box-shadow: inset -3px -3px 7px #ffffffb2, inset 3px 3px 5px rgba(94, 104, 121, 0.145);
+    margin-bottom: .2em;
+    font-size: 1.1em;
+}
+
+.resources a:hover {
+    border: var(--border);
+}
+
+/* Library */
+
+.library-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+}
+
+.library-image {
+    width: 25%;
+}
+
+.library-description {
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: inset -3px -3px 7px #ffffffb2, inset 3px 3px 5px rgba(94, 104, 121, 0.145);
+    padding: 1em;
+}
+
+.library-description .msg-btn {
+    display: inline-block;
+}
+
+/* Events */
+
+.events {
+    width: 70%;
+}
+
+.events-content {
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.event-image {
+    width: 20%;
+    overflow: hidden;
+}
+
+.event-image img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.event-details {
+    width: 77%;
+    border-left: var(--border);
+    padding-left: 1em;
+}
+
+
+.event-details h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: .3em;
+    display: inline-block;
+}
+
+.events p {
+    font-size: 1.1rem;
+    color: var(--black);
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.event-description {
+    margin-bottom: 1em;
+}
+
+.event-description .title-2 {
+    border-bottom: 3px solid var(--color-primary);
+    font-size: 1.5em;
+    display: inline-block;
+    padding: .2em 0;
+    background-color: var(--white);
+    color: var(--color-primary);
+}
+
+.event-description p {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1.5rem;
+}
+
+.image-content {
+    overflow: hidden;
+    height: 100%;
+}
+
+.image-content img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+/* Login */
+
+.login-container {
+    margin: 2em auto;
+    width: 30em;
+    padding: 1em 2em;
+}
+
+.login-input-field {
+    margin-top: 1em;
+}
+
+.login-input-field label {
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.login-input-detail {
+    align-items: center;
+}
+
+.login-input-detail input{
+    border: var(--border);
+    width: 90%;
+    padding: .5em;
+    border-radius: .1em;
+}
+
+.login-input-detail .fas {
+    background-color: var(--color-primary);
+    padding: .5em;
+    color: var(--white);
+}
+
+.login-input-field .btn {
+    background-color: var(--color-primary);
+    padding: .5em;
+    border-radius: .2em;
+    border: var(--border);
+}
+
+.login-input-field .btn:hover {
+    background-color: var(--white);
+    color: var(--color-primary);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--white);
+}
+
+.status-info {
+    display: block;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    border: var(--border);
+    padding: 1em;
+    border-left: 7px solid var(--color-primary);
+    border-radius: .1em;
+    text-align: center;
+}
+
+.page-links {
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.page-links .btn {
+    background-color: var(--color-primary);
+    width: 10%;
+    border: var(--border);
+}
+
+.page-links .btn:hover {
+    background-color: var(--white);
+    color: var(--color-primary);
+}
+
+.page-links p {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.page-links p.btn {
+    border-color: transparent;
+    background-color: transparent;
+    color: var(--black);
+}
+
+/* Footer */
+
+footer {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address, .services, .quick-links, .social-links {
+    width: 20%;
+}
+
+footer h3 {
+    margin: .6em 0;
+    padding: .2em;
+}
+
+footer p {
+    line-height: 1.5;
+    padding: .2em;
+    color: var(--white);
+}
+
+footer .q-links a{
+    display: block;
+    color: var(--white);
+    text-decoration: underline;
+}
+
+footer .socials a {
+    color: var(--white);
+    display: block;
+    border: 1px solid var(--white);
+    margin-bottom: .5em;
+}
+
+footer .socials a:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+footer .socials a span {
+    margin-left: .3em;
+}
+
+
+/* media queries */
+
+@media screen and (min-width: 768px) {
+    .image-pastor:hover .details-pastor {
+        inset: 5px;
+        border: 1px solid var(--white);
+    }
+
+    .details-pastor {
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    p {
+        font-size: 1.3rem;
+        color: var(--black);
+    }
+    
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile-block {
+        display: block;
+    }
+
+    .mobile-block-inline {
+        display: inline-block;
+    }
+
+    .container {
+        padding: 1em 5%;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .site-title h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        position: absolute;
+        display: block;
+        top: 100%; left: 0; right: 0;
+        background-color: var(--color-primary);
+        z-index: 990;
+        padding: 1em 10%;
+        border-bottom: 2px solid var(--white);
+        height: 29rem;
+        transition: .5s;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    nav ul a {
+        color: var(--white);
+        display: inline-block;
+        width: 100%;
+        padding-block: 1.2em;
+        border-bottom: 1px solid var(--white);
+    }
+
+    nav ul a.give-mobile {
+        border: 1px solid var(--white);
+        display: inline-block;
+        background-color: var(--white);
+        color: var(--color-primary);
+        margin-top: .5em;
+        padding: 1em;
+        border-radius: 2px;
+    }
+
+    nav ul a.give-mobile:hover {
+        background-color: var(--color-primary);
+        color: var(--white);
+    }
+
+    nav ul a.selected li {
+        border: 1px solid var(--white);
+        display: inline-block;
+        padding: .5em;
+        border-radius: 2px;
+    }
+
+    .icons .fas {
+        font-size: 1.5rem;
+        color: var(--color-primary);
+    }
+
+    main {
+        margin: 4em 0;
+    }
+
+    nav ul.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .hero {
+        height: 65vh;
+        gap: 1em;
+        display: flex;
+    }
+
+    .hero .welcome-text {
+        width: 100%;
+    }
+
+    .hero .welcome-text h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .hero .welcome-text p{
+        line-height: 1.3;
+    }
+
+    .welcome-text p {
+        color: var(--white);
+    }
+
+    .hero .image {
+        width: 100%;
+    }
+
+    .new .header h1 {
+        font-size: 2rem;
+    }
+
+    .new .header p {
+        font-size: 1.3rem;
+    }
+
+    .new-content {
+        width: 100%;
+    }
+
+    .second {
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+
+    .second .image, .second .section-text, .address, .services, .quick-links, .social-links, .inspiration, .latest-news, .giving-online, .acct-details p.info, .input-field, .media, .message-body .message-details, .events, .event-details, .department-details, .department-image {
+        width: 100%;
+    }
+
+    .second .image {
+        height: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .second .section-text h1{
+        font-size: 2rem;
+    }
+
+    .details-pastor.mama {
+        flex-direction: column-reverse;
+    }
+
+    .details-pastor.mama .text-details {
+        align-items: start;
+    }
+
+    .text-details h3.name {
+        font-size: 1.5rem;
+    }
+
+    .text-details h3 {
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+
+    .details-pastor {
+        justify-content: space-around;
+    }
+    
+    .faith {
+        padding: 1em;
+        padding-block: 5.5em;
+    }
+
+    .faith h1 {
+        font-size: 1.8rem;
+    }
+
+    .faith p {
+        padding: 0;
+        font-size: 1.25rem;
+        color: var(--white);
+    }
+
+    .expressions {
+        margin-top: 2em;
+    }
+
+    .expressions p {
+        color: var(--white);
+    }
+
+    .expressions-container {
+        margin-top: 1em;
+    }
+
+    .month {
+        flex-direction: column;
+        padding-block: 4em;
+        gap: 4em;
+    }
+
+    .month p{
+        color: var(--white);
+    }
+
+    .month-content, .month-image, .give-content, .give-image {
+        width: 100%;
+    }
+
+    .month-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .month-content h2 {
+        margin-block: 1em;
+        line-height: 1.3;
+    }
+
+    .month-content p {
+        line-height: 1.5;
+    }
+
+    .give-image img.img-one {
+        height: 10rem;
+    }
+
+    .give-image {
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    }
+
+    .give-online {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .status-info p{
+        color: var(--color-primary);
+        font-family: 'Josefin Sans', 'sans-serif';
+        
+    }
+
+    footer .container, .inspiration-footer, .acct-details, .half, .inspiration-container, .message-body, .events-content, .details-pastor{
+        flex-direction: column;
+    }
+
+    .address, .services, .quick-links {
+        width: 100%;
+        border-bottom: 1px solid var(--white);
+        padding-block: 1.2em;
+    }
+
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .tenets .title {
+        margin-bottom: 1em;
+    }
+
+    .tenets-container {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .tenets .content {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .inspiration {
+        margin-bottom: 2em;
+    }
+
+    .inspiration-container h1 {
+        font-size: 1.6rem;
+    }
+
+    .inspiration-container h3 {
+        font-size: 1.4rem;
+    }
+
+    .inspiration-footer a{
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .acct-details p.info {
+        margin-bottom: 1em;
+    }
+
+    .giving-details {
+        margin-bottom: 1.5em;
+        border: none;
+        box-shadow: var(--box-shadow);
+    }
+
+    .media {
+        margin-bottom: -2em;
+    }
+
+    .message-content {
+        display: flex;
+        border: none;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px solid grey;
+    }
+
+    .message-image {
+        width: 30%;
+    }
+
+    .message-body .message-image.w-100 {
+        width: 100%;
+    }
+
+    .message-description {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .message-description h3 {
+        font-size: 1.25rem;
+        margin-bottom: .1em;
+    }
+
+    .message-description p {
+        font-size: 1.1rem;
+    }
+
+    .sub-section .msg-btn {
+        padding: .3em 1em;
+        display: inline-block;
+    }
+
+    .bottom-nav {
+        position: fixed;
+        background-color: var(--white);
+        bottom: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: .2em .3em;
+        border-top: var(--border);
+    }
+
+    .media-links {
+        text-align: center;
+    }
+
+    .media-links.selected p {
+        color: var(--white);
+    }
+
+    .media-links:hover {
+        border: var(--border);
+    }
+
+    .message-details {
+        text-align: justify;
+    }
+
+    .message-details h2 {
+        margin-top: .5em;
+    }
+
+    audio {
+        margin-bottom: 1em;
+    }
+
+    .audio {
+        flex-direction: column;
+    }
+
+    .events-content {
+        align-items: start;
+    }
+
+    .event-details {
+        border: none;
+        padding: 0;
+    }
+
+    .department-content {
+        flex-direction: column;
+    }
+
+    .department-image {
+        margin-bottom: 1em;
+        border: 1px solid var(--white);
+    }
+
+    .large-text p {
+        padding: .3em;
+    }
+
+    .login-container {
+        margin: 1em auto;
+        width: 100%;
+        padding: 1em 5%;
+    }
+
+    .login-input-detail input{
+        width: 85%;
+    }
+
+    footer h3 {
+        font-size: 1.4rem;
+    }
+
+    footer a {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .expressions-container, .pastors-container, .confessions {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    video {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .heading h1 {
+        font-size: 1.8rem;
+    }
+
+    .heading p {
+        font-size: 1rem;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    }
+}
